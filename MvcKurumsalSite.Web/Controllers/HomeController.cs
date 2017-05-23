@@ -10,7 +10,7 @@ namespace MvcKurumsalSite.Web.Controllers
     public class HomeController : BaseController
     {
         //_uow base den geliyor.
-        // GET: Home
+        // GET: Hom
         public ActionResult Index()
         {
             
