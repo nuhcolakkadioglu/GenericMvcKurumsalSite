@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "Yeni sayfa ekleme formu";
+}
+<div class="page-header">
+    <h1>
+        Yeni Sayfa Ekleme Formu
+        <small>
+            <i class="ace-icon fa fa-angle-double-right"></i>
+            hakkınızda,misyon vs.. gibi sayfalarınızı bu alandan ekleyebilirsiniz.
+        </small>
+    </h1>
+</div><!-- /.page-header -->
+
+<div class="row">
+    <div class="col-xs-12">
+        <form class="form-horizontal" method="post" role="form" action="/Admin/Sayfalar/Create">
+
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Sayfa Adı </label>
+
+                <div class="col-sm-9">
+                    <input type="text" name="SayfaAdi" placeholder="Sayfa adı" class="col-xs-10 col-sm-5" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Sayfa İçerik </label>
+
+                <div class="col-sm-9">
+
+                    <textarea class="form-control" name="SayfaIcerik"></textarea>
+
+                </div>
+            </div>
+
+            <div class="form-actions center">
+                <input class="btn btn-sm btn-success" value="Kaydet" type="submit" />
+            </div>
+
+        </form>
+    </div>
+
+</div>
+

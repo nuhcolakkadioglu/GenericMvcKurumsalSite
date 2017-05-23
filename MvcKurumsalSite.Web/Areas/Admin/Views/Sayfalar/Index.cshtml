@@ -1,0 +1,58 @@
+﻿
+@using MvcKurumsalSite.Domain.Entities
+@model IEnumerable<Sayfa>
+
+@{
+    ViewBag.Title = "Sayfa Listesi";
+}
+
+<div class="page-header">
+    <h1>
+        Sayfa listesi
+        <small>
+            <i class="ace-icon fa fa-angle-double-right"></i>
+             <a class="btn btn-primary" href="/Admin/Sayfalar/Create">Yeni Sayfa Ekle</a>
+        </small>
+    </h1>
+</div><!-- /.page-header -->
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="row">
+            <div class="col-xs-12">
+                <table id="simple-table" class="table  table-bordered table-hover">
+                    <thead>
+                        <tr>
+
+                            <th class="detail-col">Sayfa Adı</th>
+
+                            <th class="hidden-480">Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        @foreach (Sayfa item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    <a href="#">@item.SayfaAdi</a>
+                                </td>
+
+                                <td>
+                                    <a href="/Admin/Sayfalar/Update/@item.Id" class="btn btn-xs btn-primary">
+                                        <i class="fa fa-pencil-square-o"></i>
+                                    </a>
+                                    <a href="/Admin/Sayfalar/Delete/@item.Id" class="btn btn-xs btn-danger">
+                                        <i class="fa fa-trash-o"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+
+
+                    </tbody>
+                </table>
+            </div><!-- /.span -->
+        </div>
+    </div>
+</div>
